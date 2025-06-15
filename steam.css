@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #1a1a1a;
+    color: #f1f1f1;
+}
+
+.encabezado {
+    padding: 30px;
+    text-align: center;
+    background: #292929;
+    border-bottom: 3px solid #ff4500;
+}
+
+.encabezado h1 {
+    font-size: 50px;
+    color: #ff4500;
+    margin: 0;
+}
+
+.encabezado p {
+    margin: 10px 0 0;
+    color: #ccc;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.barra-navegacion a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.barra-navegacion a:hover {
+    background-color: #575757;
+    color: #ff4500;
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background: #1a1a1a;
+}
+
+.tarjeta {
+    background-color: #292929;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta img {
+    width: 460px;
+    height: 215px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tarjeta h3 {
+    margin: 10px 0;
+    color: #ff4500;
+}
+
+.tarjeta .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta .boton:hover {
+    background-color: #e63900;
+}
+
+@media screen and (max-width: 1200px) {
+    .contenedor-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: auto;
+    }
+
+    .barra-navegacion {
+        flex-direction: column;
+    }
+
+    .barra-navegacion a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .encabezado h1 {
+        font-size: 40px;
+    }
+}
